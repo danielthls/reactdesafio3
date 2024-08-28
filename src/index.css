@@ -3,13 +3,21 @@
 :root {
   --de3-color-bg-primary: #fff;
   --de3-color-bg-secondary: #1890FF;
-  --de3-color-bg-tertiary: #E6F7FF;
+  --de3-color-bg-search: #E6F7FF;
+  --de3-color-bg-result: #F5F5F5;
 
   --de3-color-btn-primary: #1890FF;
 
   --de3-color-font-primary: #000;
   --de3-color-font-secondary: #fff;
   --de3-color-font-tertiary: #7E7E7E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
 }
 
 a,
@@ -25,4 +33,16 @@ body {
 
 main {
   padding: 0 20px;
+}
+
+.de3-container {
+  width: 100%;
+  max-width: 1251px;
+  margin: 0 auto;
+}
+
+.de3-btn-container {
+  width: 101px;
+  display: grid;
+  grid-gap: 20px;
 }

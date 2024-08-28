@@ -1,0 +1,16 @@
+.de3-home {
+    display: flex;
+    padding: 27px 41px;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.de3-title h1 {
+    font-size: 48px;
+    color: -var(-de3-color-font-primary);
+}
+
+.de3-title h2 {
+    font-size: 24px;
+    color: var(--de3-color-font-tertiary);
+}
