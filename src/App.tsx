@@ -2,16 +2,16 @@ import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from './routes/Main'
 import Home from './routes/Main/Home'
+import Search from './routes/Main/Search'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />}>
           <Route index element={<Home />} />
-          <Route path="search" element={<Main />}></Route>
+          <Route path="search" element={<Search />} />
         </Route>
 
       </Routes>
