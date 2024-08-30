@@ -1,5 +1,5 @@
 export type UserDTO = {
-    login: string;
+    name: string;
     url: string;
     followers: number;
     location: string;

@@ -11,6 +11,10 @@
   --de3-color-font-primary: #000;
   --de3-color-font-secondary: #fff;
   --de3-color-font-tertiary: #7E7E7E;
+  --de3-color-font-placehold: #BFBFBF;
+  --de3-color-font-info-border: #d9d9d9;
+  --de3-color-font-info-title: #1890FF;
+  --de3-color-font-data: #737373;
 }
 
 * {

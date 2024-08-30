@@ -13,6 +13,7 @@ type SearchData = {
 export default function Search() {
 
     const [userSearch, setUserSearch] = useState<boolean>(false);
+    const [userExists, setUserExists] = useState<boolean>(true);
 
     const [searchData, setSearchData] = useState<SearchData>({
         userName: ''
@@ -33,11 +34,12 @@ export default function Search() {
         setUserSearch(true)
         userService.findByUserName(searchData.userName)
             .then(response => {
+                setUserExists(true)
                 setUser(response.data)
                 console.log(response.data)
             })
             .catch(error => {
-                setUser(undefined);
+                setUserExists(false)
                 console.log(error.response.data)
             })
 
@@ -63,8 +65,8 @@ export default function Search() {
 
             <section id="de3-result-card">
                 {userSearch
-                    ? user
-                        ? <UserDetailCard user={user} />
+                    ? userExists
+                        ? user && <UserDetailCard user={user} />
                         : <h1>Erro ao buscar o usuário</h1>
                     : <p></p>
                 }
