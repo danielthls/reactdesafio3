@@ -15,15 +15,6 @@ export default function SearchCard({ onSubmit }: Props) {
     };
 
     return (
-        <div className='de3-container de3-search-container'>
-            <h1>Encontre um perfil Github</h1>
-
-            <input type="text"
-                placeholder='Usuário Github'
-                onChange={(e) => setInputValue(e.target.value)} />
-            <button onClick={handleClick}>Encontrar</button>
-
-
-        </div>
+        
     );
 }

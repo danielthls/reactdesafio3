@@ -12,16 +12,15 @@ export default function Search() {
     }
 
     return (
-        <main>
-            <section id="de3-search">
+        <main className="de3-search">
+            <section id="de3-search-card">
                 <div className='de3-container de3-search-container'>
                     <h1>Encontre um perfil Github</h1>
-
-                    <input type="text"
-                        placeholder='Usuário Github' />
-                    <Button caption='Encontrar' />
-
-
+                    <form action="">
+                        <input type="text"
+                            placeholder='Usuário Github' />
+                        <Button caption='Encontrar' />
+                    </form>
                 </div>
             </section>
 
