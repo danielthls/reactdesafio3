@@ -1,7 +1,5 @@
 import './styles.css'
-import { useEffect, useState } from 'react';
 import { UserDTO } from '../../models/User';
-import * as userService from '../../services/UserService'
 
 type Props = {
     user: UserDTO;

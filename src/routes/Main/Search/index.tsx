@@ -1,5 +1,6 @@
 
 import Button from "../../../components/Button";
+import UserDetailCard from "../../../components/UserDetailCard";
 import { UserDTO } from "../../../models/User";
 import * as userService from '../../../services/UserService'
 import './styles.css'
@@ -11,25 +12,15 @@ type SearchData = {
 
 export default function Search() {
 
+    const [userSearch, setUserSearch] = useState<boolean>(false);
+
     const [searchData, setSearchData] = useState<SearchData>({
         userName: ''
     });
 
-    //const [userName, setUserName] = useState<string>('');
-
     const [user, setUser] = useState<UserDTO>();
-    /*
-    useEffect(() => {
-        userService.findByUserName(userName)
-            .then(response => {
-                setUser(response.data)
-                console.log(response.data)
-                console.log('user: ' + user);
-            })
 
-        console.log(userName)
-    }, [userName])
-    */
+    useEffect
 
     function handleInputChange(event: any) {
         const value = event.target.value;
@@ -39,10 +30,15 @@ export default function Search() {
 
     function handleFormSubmit(event: any) {
         event.preventDefault();
+        setUserSearch(true)
         userService.findByUserName(searchData.userName)
             .then(response => {
                 setUser(response.data)
                 console.log(response.data)
+            })
+            .catch(error => {
+                setUser(undefined);
+                console.log(error.response.data)
             })
 
     }
@@ -66,8 +62,12 @@ export default function Search() {
             </section>
 
             <section id="de3-result-card">
-                <div className='de3-container de3-result-container'>
-                </div>
+                {userSearch
+                    ? user
+                        ? <UserDetailCard user={user} />
+                        : <h1>Erro ao buscar o usuário</h1>
+                    : <p></p>
+                }
             </section>
 
         </main>

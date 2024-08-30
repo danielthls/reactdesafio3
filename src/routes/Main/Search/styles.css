@@ -10,7 +10,7 @@
     background-color: var(--de3-color-bg-search);
 }
 
-.de3-search-container h1 {
+.de3-search h1 {
     font-size: 38px;
     color: var(--de3-color-font-primary);
     font-weight: 500;
